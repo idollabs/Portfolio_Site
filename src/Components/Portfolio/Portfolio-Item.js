@@ -8,9 +8,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import webImage from '../../images/new-england-mermaid-screenshot.png';
+
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 346,
   },
 });
 
@@ -23,12 +25,17 @@ export default function PortfolioItem() {
         <CardMedia
           component='img'
           alt='Contemplative Reptile'
-          height='140'
-          image='/static/images/cards/contemplative-reptile.jpg'
+          height='200'
+          image={webImage}
           title='Contemplative Reptile'
         />
         <CardContent>
-          <Typography gutterBottom variant='h5' component='h2'>
+          <Typography
+            gutterBottom
+            variant='h5'
+            component='h2'
+            color='secondary'
+          >
             Lizard
           </Typography>
           <Typography variant='body2' color='textSecondary' component='p'>
@@ -38,10 +45,7 @@ export default function PortfolioItem() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size='small' color='primary'>
-          Share
-        </Button>
-        <Button size='small' color='primary'>
+        <Button size='small' color='secondary'>
           Learn More
         </Button>
       </CardActions>

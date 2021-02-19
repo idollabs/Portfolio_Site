@@ -8,7 +8,7 @@
 
 html {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #3e0d57 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #3e0d57 0%, #100316 100%);
   overflow: hidden;
 }
 
@@ -36,4 +36,48 @@ body {
   height: 4rem;
   width: 4rem;
   background: #f4f4f4;
+}
+
+.heading {
+  font-family: 'Bad Script', cursive;
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+.treeTopContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.emptyTreeItem {
+  width: 50%;
+  height: 40px;
+}
+
+.treeTopRight {
+  border-left: solid #f4f4f476 1px;
+}
+.treeTopLeft {
+  border-right: solid #f4f4f476 1px;
+}
+
+.treeMidLine {
+  width: 934px;
+  height: 2px;
+  background: #f4f4f4;
+}
+
+.treeItemContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.treeBottomContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.treePortfolioItem {
+  width: 173px;
+  height: 40px;
 }
