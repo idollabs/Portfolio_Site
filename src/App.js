@@ -1,21 +1,28 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import { theme } from './theme';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import Navigation from './Components/Navigation';
 import Intro from './Components/Intro';
 import Portfolio from './Components/Portfolio/Portfolio';
-import Tree from './Components/Tree';
+
+const useStyles = makeStyles({
+  root: {
+    overflow: 'auto',
+    height: 'auto',
+  },
+});
 
 const Mui = () => {
+  const classes = useStyles();
+
   return (
     <ThemeProvider theme={theme}>
       <Navigation />
 
-      <Container maxWidth='lg'>
+      <Container maxWidth='lg' className={classes.root}>
         <Intro />
         <br />
-        <Tree />
         <br />
 
         <Portfolio />

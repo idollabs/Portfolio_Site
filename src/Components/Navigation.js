@@ -14,17 +14,19 @@ const Navigation = () => {
     <div>
       <AppBar color='primary' position='sticky'>
         <Container maxWidth='lg'>
-          <Toolbar color='primary'>
-            <ButtonGroup
-              variant='text'
-              color='secondary'
-              aria-label='contained primary button group'
-            >
-              <Button>Home</Button>
-              <Button>Resume</Button>
-              <Button>GitHub</Button>
-            </ButtonGroup>
-          </Toolbar>
+          <Box display='flex' justifyContent='center'>
+            <Toolbar color='primary'>
+              <ButtonGroup
+                variant='text'
+                color='secondary'
+                aria-label='contained primary button group'
+              >
+                <Button>Home</Button>
+                <Button>Resume</Button>
+                <Button>GitHub</Button>
+              </ButtonGroup>
+            </Toolbar>
+          </Box>
         </Container>
       </AppBar>
     </div>

@@ -5,10 +5,12 @@ export const theme = createMuiTheme({
     allVariants: {
       color: '#f4f4f4',
     },
+
     h2: {
       fontSize: 36,
       marginBottom: 20,
     },
+    fontFamily: ['Montserrat', 'sans-serif'].join(','),
   },
   palette: {
     primary: {
@@ -16,6 +18,7 @@ export const theme = createMuiTheme({
     },
     secondary: {
       main: '#3e0d57',
+      dark: '#002884',
     },
   },
 });

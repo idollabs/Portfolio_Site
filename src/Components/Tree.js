@@ -7,10 +7,10 @@ const Tree = () => {
         <div className='emptyTreeItem treeTopLeft'></div>
         <div className='emptyTreeItem treeTopRight'></div>
       </section>
-      {/* <section className='treeTopContainer'>
+      <section className='treeTopContainer'>
         <div className='treeMidLine'></div>{' '}
       </section>
-      <section className='treeBottomContainer'>
+      {/* <section className='treeBottomContainer'>
         <div className='treeItemContainer'>
           <div className='treePortfolioItem treeTopLeft'></div>
           <div className='treePortfolioItem treeTopRight'></div>
