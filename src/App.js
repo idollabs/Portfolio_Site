@@ -17,6 +17,7 @@ const Mui = () => {
   const classes = useStyles();
 
   return (
+    // <ContextProvider>
     <ThemeProvider theme={theme}>
       <Navigation />
 

@@ -1,20 +1,12 @@
-import React, { useState, createContext } from 'react';
+import React, { useEffect } from 'react';
 import PortfolioItem from './Portfolio-Item';
 import Tree from '../Tree';
 import { Typography } from '@material-ui/core';
-import ItemExpanded from './ItemExpanded';
+import PortfolioItemExpanded from './PortfolioItemExpanded';
+import { useSiteState } from '../../State/reducer';
 
 const Portfolio = () => {
-  const [expandItem, setExpandItem] = useState(false);
-
-  const togglePortfolioItem = () => {
-    if (!expandItem) {
-      setExpandItem(true);
-    } else {
-      setExpandItem(false);
-    }
-    console.log(expandItem);
-  };
+  const { state, togglePortfolioItem } = useSiteState();
 
   return (
     <>
@@ -26,10 +18,12 @@ const Portfolio = () => {
       <br />
       <div className='portfolioContainer'>
         <PortfolioItem onClick={togglePortfolioItem} />
-        <PortfolioItem />
-        <PortfolioItem />
+        <PortfolioItem onClick={togglePortfolioItem} />
+        <PortfolioItem onClick={togglePortfolioItem} />
       </div>
-      {expandItem && <ItemExpanded />}
+
+      <button onClick={togglePortfolioItem}>test</button>
+      {state.itemExpanded && <PortfolioItemExpanded />}
     </>
   );
 };
