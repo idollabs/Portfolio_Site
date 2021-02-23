@@ -14,6 +14,7 @@ import { projects } from '../../data/projects';
 import { useSiteState } from '../../State/context';
 import CloseIcon from '@material-ui/icons/Close';
 import { PortfolioCarousel } from './PortfolioCarousel';
+import find from 'lodash/find';
 
 import webImage from '../../images/new-england-mermaid-screenshot.png';
 
@@ -44,8 +45,9 @@ const useStyles = makeStyles({
 
 const PortfolioItemExpanded = () => {
   const classes = useStyles();
-  const { togglePortfolioItem } = useSiteState();
-
+  const { state, togglePortfolioItem } = useSiteState();
+  // const {  } = find(projects, { id: id });
+  console.log('state', state);
   return (
     <>
       <div
@@ -58,7 +60,7 @@ const PortfolioItemExpanded = () => {
         return (
           <Card className={classes.root} key={id}>
             <CardActionArea>
-              <PortfolioCarousel />
+              <PortfolioCarousel id={id} />
 
               <CardContent>
                 <div className={classes.heading}>

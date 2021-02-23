@@ -35,7 +35,7 @@ export default function PortfolioItems() {
                 height='200'
                 image={mainImage}
                 title={title}
-                onClick={togglePortfolioItem}
+                onClick={() => togglePortfolioItem(id)}
               />
               <CardContent>
                 <Typography
@@ -43,7 +43,7 @@ export default function PortfolioItems() {
                   variant='h5'
                   component='h2'
                   color='secondary'
-                  onClick={togglePortfolioItem}
+                  onClick={() => togglePortfolioItem(id)}
                 >
                   {title}
                 </Typography>
@@ -56,7 +56,7 @@ export default function PortfolioItems() {
               <Button
                 size='small'
                 color='secondary'
-                onClick={togglePortfolioItem}
+                onClick={() => togglePortfolioItem(id)}
               >
                 Learn More
               </Button>

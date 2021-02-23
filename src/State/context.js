@@ -9,7 +9,7 @@ const reducer = (state, action) => {
     case 'OPEN_ITEM': {
       return {
         ...state,
-        itemExpanded: true,
+        itemExpanded: action.id,
       };
     }
     case 'CLOSE_ITEM': {
@@ -29,15 +29,18 @@ export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { itemExpanded } = state;
 
-  const togglePortfolioItem = useCallback(() => {
-    if (!itemExpanded) {
-      dispatch({ type: 'OPEN_ITEM' });
-    } else {
-      dispatch({ type: 'CLOSE_ITEM' });
-    }
+  const togglePortfolioItem = useCallback(
+    (id) => {
+      if (!itemExpanded) {
+        dispatch({ type: 'OPEN_ITEM', id });
+      } else {
+        dispatch({ type: 'CLOSE_ITEM' });
+      }
 
-    console.log('itemexpanded', itemExpanded);
-  }, [dispatch, itemExpanded]);
+      console.log('itemexpanded', itemExpanded);
+    },
+    [dispatch, itemExpanded]
+  );
 
   const value = { state, togglePortfolioItem };
 

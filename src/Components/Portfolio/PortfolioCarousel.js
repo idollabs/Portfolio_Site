@@ -5,11 +5,11 @@ import { projects } from '../../data/projects';
 import webImage from '../../images/new-england-mermaid-screenshot-720.png';
 import responsiveImage from '../../images/NewEnglandMermaidIPhone.jpg';
 import blogImage from '../../images/NewEnglandMermaidBlogPost.jpg';
+import find from 'lodash/find';
 
-export const PortfolioCarousel = (props) => {
-  const { carouselImages } = projects;
-  //   const { imgId, image } = carouselImages;
-
+export const PortfolioCarousel = ({ id }) => {
+  const { carouselImages = [] } = find(projects, { id: id });
+  console.log('carousel', carouselImages);
   var items = [
     {
       name: 'Random Name #1',
@@ -32,8 +32,8 @@ export const PortfolioCarousel = (props) => {
 
   return (
     <Carousel animation='slide'>
-      {items.map((item, i) => (
-        <Item key={i} item={item} />
+      {carouselImages.map(({ imgId, image }) => (
+        <Item key={imgId} item={image} />
       ))}
     </Carousel>
   );

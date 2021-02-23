@@ -4,7 +4,7 @@ import newEnglandBlog from '../images/NewEnglandMermaidBlogPost.jpg';
 
 export const projects = [
   {
-    id: 0,
+    id: 5,
     title: 'New England Mermaid',
     mainImage: newEnglandMain,
     shortDesc:
