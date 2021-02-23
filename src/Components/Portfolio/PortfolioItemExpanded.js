@@ -12,6 +12,7 @@ import {
 } from '@material-ui/core';
 import { projects } from '../../data/projects';
 import { useSiteState } from '../../State/context';
+import CloseIcon from '@material-ui/icons/Close';
 import { PortfolioCarousel } from './PortfolioCarousel';
 
 import webImage from '../../images/new-england-mermaid-screenshot.png';
@@ -20,13 +21,24 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 600,
     position: 'absolute',
-    top: '70%',
+    top: '55%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    height: '82%',
+    maxHeight: '60rem',
+    overflow: 'auto',
   },
 
   heading: {
     textAlign: 'center',
+  },
+  quit: {
+    position: 'absolute',
+    top: '17%',
+    left: '78%',
+    transform: 'translate(-50%, -50%)',
+    color: '#f4f4f4',
+    fontSize: '3rem',
   },
 });
 
@@ -40,6 +52,8 @@ const PortfolioItemExpanded = () => {
         className='itemSelectedContainer'
         onClick={togglePortfolioItem}
       ></div>
+      {/* <CloseIcon className={classes.quit} /> */}
+
       {projects.map(({ id, title, link, technologies, longDesc }) => {
         return (
           <Card className={classes.root} key={id}>

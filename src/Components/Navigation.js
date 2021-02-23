@@ -12,7 +12,7 @@ import {
 const Navigation = () => {
   return (
     <div>
-      <AppBar color='primary' position='sticky'>
+      <AppBar color='primary' position='absolute'>
         <Container maxWidth='lg'>
           <Box display='flex' justifyContent='center'>
             <Toolbar color='primary'>
@@ -23,7 +23,13 @@ const Navigation = () => {
               >
                 <Button>Home</Button>
                 <Button>Resume</Button>
-                <Button>GitHub</Button>
+                <Button
+                  href='https://github.com/idollabs'
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  GitHub
+                </Button>
               </ButtonGroup>
             </Toolbar>
           </Box>

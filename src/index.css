@@ -15,6 +15,8 @@ html {
 body {
   color: #f4f4f4;
   font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  overflow: auto;
 }
 
 .grid {
@@ -41,9 +43,10 @@ body {
 
 .heading {
   font-family: 'Tangerine', cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 100;
   text-align: center;
+  color: #f4f4f490;
 }
 
 .introParagraph {

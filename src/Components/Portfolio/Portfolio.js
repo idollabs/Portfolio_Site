@@ -10,9 +10,10 @@ const Portfolio = () => {
 
   return (
     <>
-      <Typography variant='h2' align='center'>
-        Portfolio
-      </Typography>
+     
+      <h2 className='heading'>Portfolio</h2>
+      <br />
+
       <Tree />
       <br />
       <br />

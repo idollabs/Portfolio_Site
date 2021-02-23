@@ -6,14 +6,14 @@ const Intro = () => {
     <div>
       <br />
       <Typography variant='h1' align='center'>
-        Andrew Dauphinais
+        <Box marginTop='60px'> Andrew Dauphinais</Box>
       </Typography>
-
-      {/* <br />
-      <h2 className='heading'>I love to create...</h2>
       <br />
-
-      <p className='introParagraph'>
+      <Typography variant='h2' align='center'>
+        Web Developer
+      </Typography>{' '}
+      <br />
+      {/* <p className='introParagraph'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat
         id eveniet consequuntur, excepturi sint voluptatum maxime hic, incidunt
         animi magni nobis ipsum, dolorum provident pariatur ab unde commodi!

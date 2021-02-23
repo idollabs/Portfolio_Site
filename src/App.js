@@ -21,13 +21,11 @@ const Mui = () => {
     <ContextProvider>
       <ThemeProvider theme={theme}>
         <Navigation />
-
         <Container maxWidth='lg' className={classes.root}>
           <Intro />
-          <br />
-          <br />
 
           <Portfolio />
+          <br />
         </Container>
       </ThemeProvider>
     </ContextProvider>
