@@ -63,6 +63,12 @@ body {
   background: rgba(0, 0, 0, 0.767);
 }
 
+.carouselImg {
+  width: 100%;
+  height: auto;
+}
+
+/* ------tree------ */
 .treeTopContainer {
   display: flex;
   justify-content: center;

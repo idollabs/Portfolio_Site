@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import PortfolioItem from './Portfolio-Item';
+import PortfolioItems from './PortfolioItems';
 import Tree from '../Tree';
 import { Typography } from '@material-ui/core';
 import PortfolioItemExpanded from './PortfolioItemExpanded';
-import { useSiteState } from '../../State/reducer';
+import { useSiteState } from '../../State/context';
 
 const Portfolio = () => {
   const { state, togglePortfolioItem } = useSiteState();
@@ -16,14 +16,10 @@ const Portfolio = () => {
       <Tree />
       <br />
       <br />
-      <div className='portfolioContainer'>
-        <PortfolioItem onClick={togglePortfolioItem} />
-        <PortfolioItem onClick={togglePortfolioItem} />
-        <PortfolioItem onClick={togglePortfolioItem} />
-      </div>
 
-      <button onClick={togglePortfolioItem}>test</button>
-      {state.itemExpanded && <PortfolioItemExpanded />}
+      <PortfolioItems />
+
+      {!!state.itemExpanded && <PortfolioItemExpanded />}
     </>
   );
 };

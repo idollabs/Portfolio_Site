@@ -1,4 +1,8 @@
-import { useReducer, useCallback } from 'react';
+import { useReducer, useCallback, useContext, createContext } from 'react';
+
+const initialState = {
+  itemExpanded: false,
+};
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -19,11 +23,9 @@ const reducer = (state, action) => {
   }
 };
 
-const initialState = {
-  itemExpanded: false,
-};
+const Context = createContext(null);
 
-export const useSiteState = () => {
+export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { itemExpanded } = state;
 
@@ -36,6 +38,14 @@ export const useSiteState = () => {
 
     console.log('itemexpanded', itemExpanded);
   }, [dispatch, itemExpanded]);
+
+  const value = { state, togglePortfolioItem };
+
+  return <Context.Provider value={value}>{children}</Context.Provider>;
+};
+
+export const useSiteState = () => {
+  const { state, togglePortfolioItem } = useContext(Context);
 
   return { state, togglePortfolioItem };
 };
