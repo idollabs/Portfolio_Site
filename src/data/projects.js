@@ -31,7 +31,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'New England Mermaid',
+    title: 'Not New England Mermaid',
     mainImage: newEnglandMain,
     shortDesc:
       'A blog website custom built to house 3 different blogs, built using WordPress as the CMS',

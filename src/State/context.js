@@ -37,7 +37,7 @@ export const ContextProvider = ({ children }) => {
         dispatch({ type: 'CLOSE_ITEM' });
       }
 
-      console.log('itemexpanded', itemExpanded);
+      // console.log('itemexpanded', itemExpanded);
     },
     [dispatch, itemExpanded]
   );

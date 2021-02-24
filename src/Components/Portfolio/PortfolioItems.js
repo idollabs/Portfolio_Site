@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 export default function PortfolioItems() {
   const classes = useStyles();
-  const { togglePortfolioItem } = useSiteState();
+  const { state, togglePortfolioItem } = useSiteState();
 
   return (
     <div className='portfolioContainer'>
@@ -56,9 +56,12 @@ export default function PortfolioItems() {
               <Button
                 size='small'
                 color='secondary'
-                onClick={() => togglePortfolioItem(id)}
+                onClick={() => {
+                  togglePortfolioItem(id);
+                  // console.log('itemExpanded', state.itemExpanded);
+                }}
               >
-                Learn More
+                Learn More {id}
               </Button>
             </CardActions>
           </Card>

@@ -45,69 +45,65 @@ const useStyles = makeStyles({
 
 const PortfolioItemExpanded = () => {
   const classes = useStyles();
+
   const { state, togglePortfolioItem } = useSiteState();
-  // const {  } = find(projects, { id: id });
-  console.log('state', state);
+
+  const { title, link, technologies, longDesc } = find(projects, {
+    id: state.itemExpanded,
+  });
+
   return (
     <>
       <div
         className='itemSelectedContainer'
         onClick={togglePortfolioItem}
       ></div>
-      {/* <CloseIcon className={classes.quit} /> */}
+      return (
+      <Card className={classes.root} key={state.itemExpanded}>
+        <CardActionArea>
+          <PortfolioCarousel id={state.itemExpanded} />
 
-      {projects.map(({ id, title, link, technologies, longDesc }) => {
-        return (
-          <Card className={classes.root} key={id}>
-            <CardActionArea>
-              <PortfolioCarousel id={id} />
-
-              <CardContent>
-                <div className={classes.heading}>
-                  <Typography
-                    gutterBottom
-                    variant='h4'
-                    component='h2'
-                    color='secondary'
-                  >
-                    {title}
-                  </Typography>
-
-                  <Button
-                    variant='contained'
-                    size='large'
-                    color='secondary'
-                    href={link}
-                    target='_blank'
-                    rel='noreferrer noopener'
-                  >
-                    Visit Site
-                  </Button>
-                </div>
-                <br />
-                <Typography variant='h6' color='secondary' component='p'>
-                  <Box color='#00000099' textAlign='center'>
-                    {technologies}
-                  </Box>
-                </Typography>
-                <br />
-                <Typography variant='body2' color='secondary' component='p'>
-                  <Box color='#00000090'>{longDesc}</Box>
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                size='small'
+          <CardContent>
+            <div className={classes.heading}>
+              <Typography
+                gutterBottom
+                variant='h4'
+                component='h2'
                 color='secondary'
-                onClick={togglePortfolioItem}
               >
-                Close
+                {title}
+              </Typography>
+
+              <Button
+                variant='contained'
+                size='large'
+                color='secondary'
+                href={link}
+                target='_blank'
+                rel='noreferrer noopener'
+              >
+                Visit Site
               </Button>
-            </CardActions>
-          </Card>
-        );
-      })}
+            </div>
+            <br />
+            <Typography variant='h6' color='secondary' component='p'>
+              <Box color='#00000099' textAlign='center'>
+                {technologies}
+              </Box>
+            </Typography>
+            <br />
+            <Typography variant='body2' color='secondary' component='p'>
+              <Box color='#00000090'>{longDesc}</Box>
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size='small' color='secondary' onClick={togglePortfolioItem}>
+            Close
+          </Button>
+        </CardActions>
+      </Card>
+      );
     </>
   );
 };
