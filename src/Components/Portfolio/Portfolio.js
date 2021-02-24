@@ -1,26 +1,21 @@
-import React, { useEffect } from 'react';
-import PortfolioItems from './PortfolioItems';
-import Tree from '../Tree';
-import { Typography } from '@material-ui/core';
-import PortfolioItemExpanded from './PortfolioItemExpanded';
+import React from 'react';
+import Items from './Items';
+import Tree from './Tree';
+import ItemExpanded from './ItemExpanded';
 import { useSiteState } from '../../State/context';
 
 const Portfolio = () => {
-  const { state, togglePortfolioItem } = useSiteState();
+  const { state } = useSiteState();
 
   return (
     <>
-     
-      <h2 className='heading'>Portfolio</h2>
+      <h2 className="heading">Portfolio</h2>
       <br />
-
       <Tree />
       <br />
       <br />
-
-      <PortfolioItems />
-
-      {!!state.itemExpanded && <PortfolioItemExpanded />}
+      <Items />
+      {!!state.itemExpanded && <ItemExpanded />}
     </>
   );
 };

@@ -19,20 +19,20 @@ const useStyles = makeStyles({
   },
 });
 
-export default function PortfolioItems() {
+export default function Items() {
   const classes = useStyles();
-  const { state, togglePortfolioItem } = useSiteState();
+  const { togglePortfolioItem } = useSiteState();
 
   return (
-    <div className='portfolioContainer'>
+    <div className="portfolioContainer">
       {projects.map(({ id, title, mainImage, shortDesc }) => {
         return (
           <Card className={classes.root} key={id}>
             <CardActionArea>
               <CardMedia
-                component='img'
+                component="img"
                 alt={title}
-                height='200'
+                height="200"
                 image={mainImage}
                 title={title}
                 onClick={() => togglePortfolioItem(id)}
@@ -40,28 +40,27 @@ export default function PortfolioItems() {
               <CardContent>
                 <Typography
                   gutterBottom
-                  variant='h5'
-                  component='h2'
-                  color='secondary'
+                  variant="h5"
+                  component="h2"
+                  color="secondary"
                   onClick={() => togglePortfolioItem(id)}
                 >
                   {title}
                 </Typography>
-                <Typography variant='body2' color='secondary' component='p'>
-                  <Box color='#00000090'>{shortDesc}</Box>
+                <Typography variant="body2" color="secondary" component="p">
+                  <Box color="#00000090">{shortDesc}</Box>
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
               <Button
-                size='small'
-                color='secondary'
+                size="small"
+                color="secondary"
                 onClick={() => {
                   togglePortfolioItem(id);
-                  // console.log('itemExpanded', state.itemExpanded);
                 }}
               >
-                Learn More {id}
+                Learn More
               </Button>
             </CardActions>
           </Card>

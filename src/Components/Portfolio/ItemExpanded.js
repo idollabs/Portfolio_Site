@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   Box,
   Button,
-  CardMedia,
   CardContent,
   CardActions,
   CardActionArea,
@@ -12,11 +11,8 @@ import {
 } from '@material-ui/core';
 import { projects } from '../../data/projects';
 import { useSiteState } from '../../State/context';
-import CloseIcon from '@material-ui/icons/Close';
-import { PortfolioCarousel } from './PortfolioCarousel';
+import ItemCarousel from './Carousel';
 import find from 'lodash/find';
-
-import webImage from '../../images/new-england-mermaid-screenshot.png';
 
 const useStyles = makeStyles({
   root: {
@@ -43,7 +39,7 @@ const useStyles = makeStyles({
   },
 });
 
-const PortfolioItemExpanded = () => {
+const ItemExpanded = () => {
   const classes = useStyles();
 
   const { state, togglePortfolioItem } = useSiteState();
@@ -55,50 +51,50 @@ const PortfolioItemExpanded = () => {
   return (
     <>
       <div
-        className='itemSelectedContainer'
+        className="itemSelectedContainer"
         onClick={togglePortfolioItem}
       ></div>
       return (
       <Card className={classes.root} key={state.itemExpanded}>
         <CardActionArea>
-          <PortfolioCarousel id={state.itemExpanded} />
+          <ItemCarousel id={state.itemExpanded} />
 
           <CardContent>
             <div className={classes.heading}>
               <Typography
                 gutterBottom
-                variant='h4'
-                component='h2'
-                color='secondary'
+                variant="h4"
+                component="h2"
+                color="secondary"
               >
                 {title}
               </Typography>
 
               <Button
-                variant='contained'
-                size='large'
-                color='secondary'
+                variant="contained"
+                size="large"
+                color="secondary"
                 href={link}
-                target='_blank'
-                rel='noreferrer noopener'
+                target="_blank"
+                rel="noreferrer noopener"
               >
                 Visit Site
               </Button>
             </div>
             <br />
-            <Typography variant='h6' color='secondary' component='p'>
-              <Box color='#00000099' textAlign='center'>
+            <Typography variant="h6" color="secondary" component="p">
+              <Box color="#00000099" textAlign="center">
                 {technologies}
               </Box>
             </Typography>
             <br />
-            <Typography variant='body2' color='secondary' component='p'>
-              <Box color='#00000090'>{longDesc}</Box>
+            <Typography variant="body2" color="secondary" component="p">
+              <Box color="#00000090">{longDesc}</Box>
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size='small' color='secondary' onClick={togglePortfolioItem}>
+          <Button size="small" color="secondary" onClick={togglePortfolioItem}>
             Close
           </Button>
         </CardActions>
@@ -108,4 +104,4 @@ const PortfolioItemExpanded = () => {
   );
 };
 
-export default PortfolioItemExpanded;
+export default ItemExpanded;

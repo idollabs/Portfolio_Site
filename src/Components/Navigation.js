@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Button,
   ButtonGroup,
-  Typography,
   Container,
   Toolbar,
   AppBar,
@@ -12,21 +11,21 @@ import {
 const Navigation = () => {
   return (
     <div>
-      <AppBar color='primary' position='absolute'>
-        <Container maxWidth='lg'>
-          <Box display='flex' justifyContent='center'>
-            <Toolbar color='primary'>
+      <AppBar color="primary" position="absolute">
+        <Container maxWidth="lg">
+          <Box display="flex" justifyContent="center">
+            <Toolbar color="primary">
               <ButtonGroup
-                variant='text'
-                color='secondary'
-                aria-label='contained primary button group'
+                variant="text"
+                color="secondary"
+                aria-label="contained primary button group"
               >
                 <Button>Home</Button>
                 <Button>Resume</Button>
                 <Button
-                  href='https://github.com/idollabs'
-                  target='_blank'
-                  rel='noreferrer noopener'
+                  href="https://github.com/idollabs"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
                   GitHub
                 </Button>
