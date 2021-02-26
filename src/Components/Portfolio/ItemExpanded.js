@@ -82,13 +82,13 @@ const ItemExpanded = () => {
               </Button>
             </div>
             <br />
-            <Typography variant="h6" color="secondary" component="p">
+            <Typography variant="h6" color="secondary" component="span">
               <Box color="#00000099" textAlign="center">
                 {technologies}
               </Box>
             </Typography>
             <br />
-            <Typography variant="body2" color="secondary" component="p">
+            <Typography variant="body2" color="secondary" component="span">
               <Box color="#00000090">{longDesc}</Box>
             </Typography>
           </CardContent>

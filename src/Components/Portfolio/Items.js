@@ -47,7 +47,7 @@ export default function Items() {
                 >
                   {title}
                 </Typography>
-                <Typography variant="body2" color="secondary" component="p">
+                <Typography variant="body2" color="secondary" component="span">
                   <Box color="#00000090">{shortDesc}</Box>
                 </Typography>
               </CardContent>

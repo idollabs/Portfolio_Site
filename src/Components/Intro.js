@@ -13,12 +13,7 @@ const Intro = () => {
         Web Developer
       </Typography>{' '}
       <br />
-      {/* <p className='introParagraph'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque placeat
-        id eveniet consequuntur, excepturi sint voluptatum maxime hic, incidunt
-        animi magni nobis ipsum, dolorum provident pariatur ab unde commodi!
-        Delectus?
-      </p> */}
+     
     </div>
   );
 };
